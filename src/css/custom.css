@@ -393,6 +393,24 @@ table {
   padding: var(--ds-space-sm) var(--ds-space-lg);
 }
 
+/* Keep the Introduction audiences as a simple list with their original avatars. */
+.markdown h2#who-is-it-for + ul {
+  padding-left: 0;
+  list-style: none;
+}
+.markdown h2#who-is-it-for + ul > li {
+  display: flow-root;
+  min-height: 64px;
+  margin-bottom: var(--ds-space-md);
+}
+.markdown h2#who-is-it-for + ul > li img {
+  float: left;
+  width: 64px;
+  height: 64px;
+  margin-right: var(--ds-space-md);
+  object-fit: contain;
+}
+
 /* ----------------------------------------------------------------------- */
 /* Tabs                                                                     */
 /* ----------------------------------------------------------------------- */
@@ -411,7 +429,7 @@ table {
 }
 
 /* ----------------------------------------------------------------------- */
-/* Pagination (prev/next) & breadcrumbs                                     */
+/* Pagination (prev/next)                                                   */
 /* ----------------------------------------------------------------------- */
 
 .pagination-nav__link {
@@ -426,25 +444,6 @@ table {
 }
 .pagination-nav__sublabel {
   color: var(--n1-text-muted);
-}
-
-.breadcrumbs {
-  flex-wrap: wrap;
-}
-.breadcrumbs__item {
-  min-width: 0;
-}
-.breadcrumbs__link {
-  max-width: 24ch;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  display: inline-block;
-  vertical-align: bottom;
-}
-.breadcrumbs__item--active .breadcrumbs__link {
-  background: color-mix(in srgb, var(--ds-primary) 12%, transparent);
-  color: var(--ifm-color-primary);
 }
 
 /* ----------------------------------------------------------------------- */
@@ -589,28 +588,32 @@ table {
     --ifm-navbar-height: 0px;
   }
   .navbar { display: none; }
-  .theme-doc-sidebar-container,
-  .theme-doc-sidebar-container > div {
+  .theme-doc-sidebar-container {
     background: var(--n1-sidebar-background);
     border-right: 0 !important;
     overflow: visible !important;
+    clip-path: inset(0 -16px 0 0);
     position: relative;
+    z-index: 2;
+  }
+  .theme-doc-sidebar-container > div {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    max-height: 100vh;
+    overflow: visible !important;
+    background: var(--n1-sidebar-background);
     z-index: 2;
   }
 }
 
-.ai-design-intro {
-  overflow: hidden;
-  margin: 1.5rem 0 2rem;
-  border: 1px solid var(--n1-border);
-  border-radius: var(--ds-radius-lg);
-  background: var(--n1-surface);
-  box-shadow: var(--ds-shadow-4);
+/* The landing page provides its own compact header at narrow widths. */
+@media (max-width: 996px) {
+  body:has(.home-landing) .navbar { display: none; }
 }
 
-.ai-design-intro__header {
-  padding: clamp(1.5rem, 3vw, 2.5rem);
-  background: linear-gradient(115deg, color-mix(in srgb, var(--ds-primary) 8%, var(--n1-surface)), var(--n1-surface) 68%);
+.ai-design-intro {
+  margin: 1.5rem 0 2rem;
 }
 
 .ai-design-intro__eyebrow {
@@ -637,19 +640,14 @@ table {
 }
 
 .ai-design-intro__spec {
-  display: inline-flex;
-  align-items: center;
-  margin: 1.5rem 0 0;
-  padding: 0.35rem 0.75rem;
-  border: 1px solid var(--n1-border);
-  border-radius: var(--ds-radius-pill);
-  background: var(--n1-surface);
+  margin: 1rem 0 0;
   color: var(--n1-text-muted);
   font-size: 0.875rem;
 }
 
 .ai-design-intro__tools {
-  padding: 1.5rem clamp(1.5rem, 3vw, 2.5rem) 2rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
   border-top: 1px solid var(--n1-border);
 }
 
@@ -661,7 +659,7 @@ table {
 
 .ai-design-intro__grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 0.75rem;
 }
 

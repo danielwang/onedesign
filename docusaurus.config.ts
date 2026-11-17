@@ -44,6 +44,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
+          breadcrumbs: false,
         },
         // The blog plugin is disabled; this is a documentation-only site.
         blog: false,

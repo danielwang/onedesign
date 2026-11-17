@@ -4,7 +4,6 @@ import ClaudeCodeIcon from '@site/static/img/ai-icons/claude-code-dashboard.svg'
 import CursorIcon from '@site/static/img/ai-icons/cursor-dashboard.svg';
 import CodexIcon from '@site/static/img/ai-icons/codex-dashboard.svg';
 import GeminiIcon from '@site/static/img/ai-icons/gemini-dashboard.svg';
-import ChatGPTIcon from '@site/static/img/ai-icons/chatgpt-dashboard.svg';
 
 # AI designing
 
@@ -12,7 +11,7 @@ import ChatGPTIcon from '@site/static/img/ai-icons/chatgpt-dashboard.svg';
   <div className="ai-design-intro__header">
     <span className="ai-design-intro__eyebrow">Portable design guidance</span>
 
-## Design.md
+### Design.md
 
     <p className="ai-design-intro__description">One design system file for the AI tools you already use.</p>
     <p className="ai-design-intro__spec">Follows Google’s official DESIGN.md spec</p>
@@ -24,7 +23,6 @@ import ChatGPTIcon from '@site/static/img/ai-icons/chatgpt-dashboard.svg';
       <span className="ai-design-intro__tool"><span className="ai-design-intro__logo"><CursorIcon aria-hidden="true" /></span>Cursor</span>
       <span className="ai-design-intro__tool"><span className="ai-design-intro__logo"><CodexIcon aria-hidden="true" /></span>Codex</span>
       <span className="ai-design-intro__tool"><span className="ai-design-intro__logo"><GeminiIcon aria-hidden="true" /></span>Gemini</span>
-      <span className="ai-design-intro__tool"><span className="ai-design-intro__logo"><ChatGPTIcon aria-hidden="true" /></span>ChatGPT</span>
     </div>
     <p className="ai-design-intro__more">And other AI coding assistants</p>
   </div>

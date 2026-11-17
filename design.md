@@ -1,6 +1,6 @@
 ---
 version: "1.1.0"
-date: Nov 17 2026
+last date: Nov 13 2026
 name: "ONEdesign"
 description: "AI design system for nebulaONE."
 colors:
@@ -211,7 +211,7 @@ Use color roles consistently for surfaces, text, borders, actions, feedback, foc
 
 ## Data-visualization color palette
 
-Use the ordered palette below for categorical series, charts, maps, and dashboards. Start at the first color and add colors only as needed. For sequential data, use a documented light-to-dark ramp derived from one hue rather than treating categorical colors as a scale.
+Use the color palette below for categorical series, charts, maps, and dashboards. Start at the first color and add colors only as needed. For sequential data, use a documented light-to-dark ramp derived from one hue rather than treating categorical colors as a scale.
 
 | Token | Name | Resolved value | Intended use |
 |---|---|---|---|
