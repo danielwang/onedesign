@@ -59,12 +59,11 @@ const config: Config = {
     docs: {
       sidebar: {hideable: true},
     },
-    // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/onedesign-social-card.png',
     colorMode: {
-      // Retains Docusaurus's built-in light/dark theme switch in the navbar,
-      // defaulting to the visitor's OS preference.
-      respectPrefersColorScheme: true,
+      defaultMode: 'light',
+      disableSwitch: true,
+      respectPrefersColorScheme: false,
     },
     navbar: {
       title: '',
