@@ -11,17 +11,6 @@ function HomepageHeader() {
   const logoSrc = useBaseUrl('/img/logo.svg');
   return (
     <header className={styles.hero}>
-      {/* Decorative atmosphere: grain, drifting glow orbs and a fine
-          technical grid. Purely visual, so it's hidden from assistive
-          tech and never intercepts pointer events. */}
-      <div className={styles.atmosphere} aria-hidden="true">
-        <span className={styles.grain} />
-        <span className={styles.grid} />
-        <span className={`${styles.orb} ${styles.orbPrimary}`} />
-        <span className={`${styles.orb} ${styles.orbAccent}`} />
-        <span className={`${styles.orb} ${styles.orbPurple}`} />
-      </div>
-
       <div className={`container ${styles.heroInner}`}>
         <div className={styles.heroContent}>
           <Link to="/" className={styles.logo} aria-label="nebulaONE home">
@@ -41,35 +30,12 @@ function HomepageHeader() {
           </p>
           <div className={styles.buttons}>
             <Link className={`button button--primary button--lg ${styles.cta}`} to="/docs/overview/intro">
-              Browse the Docs
+              Explore
             </Link>
-          </div>
-        </div>
-
-        {/* Editorial visual column: a frosted glass pane layered over a
-            cropped, oversized echo of the wordmark. Hidden on narrow
-            viewports to keep the mobile hero fast and uncluttered. */}
-        <div className={styles.heroVisual} aria-hidden="true">
-          <div className={styles.watermark}>
-            <img src={logoSrc} alt="" className={styles.watermarkImg} />
-          </div>
-          <div className={styles.glassPane}>
-            <span className={styles.glassGrid} />
           </div>
         </div>
       </div>
     </header>
-  );
-}
-
-function HomepageFooter() {
-  const wordmarkSrc = useBaseUrl('/img/nebulaone-wordmark.webp');
-  return (
-    <footer className={styles.footer}>
-      <span className={styles.footerGrid} aria-hidden="true" />
-      <p className={styles.footerCaption}>Design guidance for humans and AI</p>
-      <img src={wordmarkSrc} alt="" className={styles.footerMark} aria-hidden="true" />
-    </footer>
   );
 }
 
@@ -80,7 +46,6 @@ export default function Home(): ReactNode {
       title={siteConfig.title}
       description="UX and UI design guidelines for humans and AI systems">
       <HomepageHeader />
-      <HomepageFooter />
     </Layout>
   );
 }

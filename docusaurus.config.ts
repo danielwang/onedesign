@@ -24,7 +24,7 @@ const config: Config = {
   // Deployment is handled by the GitHub Actions workflow in
   // .github/workflows/deploy.yml using GitHub's native Pages deployment
   // (no gh-pages branch is used), but these fields are still used for
-  // "edit this page" links and the `docusaurus deploy` CLI command.
+  // the `docusaurus deploy` CLI command.
   organizationName: 'danielwang', // Usually your GitHub org/user name.
   projectName: 'onedesign', // Usually your repo name.
 
@@ -44,9 +44,6 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          // Edit links point to the docs folder on the default branch.
-          // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/danielwang/onedesign/tree/main/',
         },
         // The blog plugin is disabled; this is a documentation-only site.
         blog: false,

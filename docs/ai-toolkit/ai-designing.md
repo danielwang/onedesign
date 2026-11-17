@@ -1,22 +1,34 @@
 import MarkdownReader from '@site/src/components/MarkdownReader';
 import source from '@site/src/generated/designMarkdown';
+import ClaudeCodeIcon from '@site/static/img/ai-icons/claude-code-dashboard.svg';
+import CursorIcon from '@site/static/img/ai-icons/cursor-dashboard.svg';
+import CodexIcon from '@site/static/img/ai-icons/codex-dashboard.svg';
+import GeminiIcon from '@site/static/img/ai-icons/gemini-dashboard.svg';
+import ChatGPTIcon from '@site/static/img/ai-icons/chatgpt-dashboard.svg';
 
 # AI designing
 
+<section className="ai-design-intro">
+  <div className="ai-design-intro__header">
+    <span className="ai-design-intro__eyebrow">Portable design guidance</span>
+
 ## Design.md
 
-Follows Google’s official DESIGN.md spec
-
-Works with your AI tools:
-
-<div className="ai-tool-list">
-  <span>Claude Code</span>
-  <span>Cursor</span>
-  <span>Codex</span>
-  <span>Gemini</span>
-  <span>ChatGPT</span>
-  <span>and other AI coding assistants</span>
-</div>
+    <p className="ai-design-intro__description">One design system file for the AI tools you already use.</p>
+    <p className="ai-design-intro__spec">Follows Google’s official DESIGN.md spec</p>
+  </div>
+  <div className="ai-design-intro__tools">
+    <p className="ai-design-intro__tools-label">Works with your AI tools</p>
+    <div className="ai-design-intro__grid">
+      <span className="ai-design-intro__tool"><span className="ai-design-intro__logo"><ClaudeCodeIcon aria-hidden="true" /></span>Claude Code</span>
+      <span className="ai-design-intro__tool"><span className="ai-design-intro__logo"><CursorIcon aria-hidden="true" /></span>Cursor</span>
+      <span className="ai-design-intro__tool"><span className="ai-design-intro__logo"><CodexIcon aria-hidden="true" /></span>Codex</span>
+      <span className="ai-design-intro__tool"><span className="ai-design-intro__logo"><GeminiIcon aria-hidden="true" /></span>Gemini</span>
+      <span className="ai-design-intro__tool"><span className="ai-design-intro__logo"><ChatGPTIcon aria-hidden="true" /></span>ChatGPT</span>
+    </div>
+    <p className="ai-design-intro__more">And other AI coding assistants</p>
+  </div>
+</section>
 
 
 <MarkdownReader content={source} filename="design.md" title="Design system guidance" initialView="ai" />

@@ -1,5 +1,6 @@
 ---
-version: "1.0.0"
+version: "1.1.0"
+date: Nov 17 2026
 name: "ONEdesign"
 description: "AI design system for nebulaONE."
 colors:
@@ -349,3 +350,26 @@ Respect reduced-motion preferences by removing non-essential movement, parallax,
 - Do use `{motion.feedback}` and `{motion.transition}` for purposeful feedback.
 - Do honor reduced-motion preferences.
 - Don’t use looping, flashing, parallax, or delayed transitions that interfere with usability.
+
+## Hard UI rules
+
+Avoid unnecessary secondary labels and descriptions. Let the layout do the explaining.
+No Rounded card with a colored left-border accent
+No emoji as icons or bullets in the UI
+No gradient
+No pill badges or eyebrow tags above headlines.
+No glassmorphism, blur, or glow.
+No decorative shadows; shadow only on floating layers.
+No icon in a colored rounded square, and no decorative icons.
+No centered-everything layouts.
+No three-up feature grids.
+No cards inside cards, and no card where spacing would do.
+No hero filler (blobs, 3D shapes, tilted screenshots).
+No fake content (logos, testimonials, stats, lorem ipsum).
+No decorative motion (scroll fade-ins, parallax, shimmer).
+No hover scale or lift.
+No marketing-adjective copy.
+No placeholder-as-label, and no vague errors.
+One primary button per view, with outcome-named labels.
+No default palette or typeface, and one accent color with one purpose.
+
