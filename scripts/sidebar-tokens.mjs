@@ -15,7 +15,7 @@ function resolve(path, seen = new Set()) {
 }
 
 const variables = {
-  background: resolve('color.brand.blue dark'),
+  background: resolve('[core] colors.grey.900'),
   accent: resolve('color.brand.client.color.2'),
   text: resolve('[themes].components.navitem.label'),
   muted: resolve('[themes].text.secondary'),

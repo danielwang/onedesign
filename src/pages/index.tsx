@@ -10,21 +10,19 @@ import styles from './index.module.css';
 export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
   const logo = useBaseUrl('/img/logo.svg');
-  const logoWhite = useBaseUrl('/img/logo-white.svg');
   const arrow = useBaseUrl('/img/home-explore-arrow.svg');
 
   return (
     <Layout
       title={siteConfig.title}
-      description="Design framework for human and AI">
+      description="Design language for nebulaONE">
       <main className={`${styles.page} home-landing`}>
         <div className={styles.content}>
           <Link to="/" className={styles.brand} aria-label="ONEdesign home">
-            <img src={logo} alt="" className={styles.logoLight} />
-            <img src={logoWhite} alt="" className={styles.logoDark} />
+            <img src={logo} alt="" />
           </Link>
           <Heading as="h1" className={styles.tagline}>
-            Design framework for <strong>human</strong> and <strong>AI</strong>
+            Design language for <strong>nebula</strong>ONE
           </Heading>
           <Link to="/docs/overview/intro" className={`button ${styles.explore}`}>
             Explore <img src={arrow} alt="" aria-hidden="true" width="20" height="20" />
