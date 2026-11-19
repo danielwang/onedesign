@@ -25,9 +25,13 @@
 .brand {
   display: flex;
   align-items: center;
+  gap: 8.65px;
+  width: 196px;
   min-width: 0;
 }
-.brand img { width: 196px; max-width: 100%; height: auto; }
+.brand img { display: block; flex: none; height: auto; max-width: none; }
+.brand img:first-child { width: 57.65px; }
+.brand img:last-child { width: 129.7px; }
 
 .collapse {
   position: absolute;
