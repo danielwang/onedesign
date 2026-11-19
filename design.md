@@ -1,6 +1,6 @@
 ---
-version: "1.1.0"
-last date: Nov 13 2026
+version: "1.1.1"
+last date: Nov 19 2026
 name: "ONEdesign"
 description: "AI design system for nebulaONE."
 colors:
@@ -23,12 +23,14 @@ colors:
     success-light: "#66DE77"
     success-main: "#0F913B"
     success-dark: "#07683B"
+    success-subtle: "#0F913B29"
     warning-light: "#F8C46D"
     warning-main: "#E88310"
     warning-dark: "#A74D08"
     error-light: "#F38A7D"
     error-main: "#D82934"
     error-dark: "#9B1435"
+    error-subtle: "#FDE0D4"
     info-light: "#91E7EF"
     info-main: "#44ADDA"
     info-dark: "#1B76AC"
@@ -71,6 +73,12 @@ colors:
     border-strong: "{colors.primitive.grey-400}"
     action-hover: "{colors.primitive.blue-dark}"
     action-disabled: "{colors.primitive.grey-400}"
+    button-primary: "{colors.primitive.grey-800}"
+    button-neutral: "{colors.primitive.grey-300}"
+    button-outline: "{colors.primitive.grey-600}"
+    button-destructive-surface: "{colors.primitive.error-subtle}"
+    button-success-surface: "{colors.primitive.success-subtle}"
+    button-success-text: "{colors.primitive.success-dark}"
     success: "{colors.primitive.success-main}"
     warning: "{colors.primitive.warning-main}"
     error: "{colors.primitive.error-main}"
@@ -166,7 +174,14 @@ components:
     focus-width: "2px"
     control-height: "40px"
     touch-target: "44px"
-  button: {radius: "{rounded.control}", height: "{components.primitive.control-height}", text: "{typography.control}", focus: "{colors.focus}"}
+  button:
+    radius: "{rounded.control}"
+    icon-gap: "{spacing.xs}"
+    large: {height: "48px", padding-inline: "{spacing.lg}", text-size: "15px", text-line-height: "26px"}
+    medium: {height: "36px", padding-inline: "{spacing.md}", text-size: "14px", text-line-height: "24px"}
+    small: {height: "30px", padding-inline: "{spacing.sm}", text-size: "12px", text-line-height: "22px"}
+    text-weight: 700
+    focus: "{colors.focus}"
   input: {radius: "{rounded.control}", height: "{components.primitive.control-height}", text: "{typography.body-small}", border: "{colors.border}"}
   card: {radius: "{rounded.card}", border: "{colors.border}", elevation: "{elevation.low}", padding: "{spacing.lg}"}
   focus-ring: {color: "{colors.focus}", width: "{components.primitive.focus-width}", offset: "2px"}
@@ -288,6 +303,32 @@ Use the smallest token that preserves clear grouping. Related items use smaller 
 On mobile, use `{breakpoints.gutter-mobile}` gutters and a single-column flow. At tablet widths, use `{breakpoints.gutter-tablet}` and allow two-column layouts where content remains readable. At desktop widths, use `{breakpoints.gutter-desktop}`, the 12-column grid, and up to `{breakpoints.content-max}` content width. Wide layouts may add whitespace without widening reading measures.
 
 Interactive controls must provide at least `{components.primitive.touch-target}` square touch area, including when the visible icon is smaller. Avoid density that forces precision tapping, horizontal scrolling for ordinary content, or loss of context at narrow widths.
+
+# Buttons
+
+## Sizes
+
+Use the large, medium, and small button sizes shown in the ONEdesign guideline. All sizes use `{components.button.radius}`, have a minimum visible width of 64px and centered content, and use `{components.button.icon-gap}` between an icon and its label.
+
+| Size | Visible height | Horizontal padding | Label |
+|---|---:|---:|---|
+| Large | 48px | `{spacing.lg}` | Segoe UI Bold, 15px / 26px |
+| Medium | 36px | `{spacing.md}` | Segoe UI Bold, 14px / 24px |
+| Small | 30px | `{spacing.sm}` | Segoe UI Bold, 12px / 22px |
+
+These are visible dimensions. Preserve the minimum `{components.primitive.touch-target}` interactive area when a button is smaller than 44px.
+
+## Priority and hierarchy
+
+Choose the button treatment by the importance of the action:
+
+| Priority | Treatment | Guideline examples |
+|---|---|---|
+| High | Solid `{colors.button-primary}` fill with `{colors.text-on-primary}` label | Save |
+| Medium | `{colors.button-neutral}` fill with `{colors.text}` label; contextual `{colors.button-destructive-surface}` fill with `{colors.error}` label; or `{colors.button-success-surface}` fill with `{colors.button-success-text}` label | Edit, Add, Delete, Save as draft |
+| Low | `{colors.surface}` fill with 1px `{colors.button-outline}` border and `{colors.text}` label | Archive, Cancel |
+
+Use the high-priority treatment for the main outcome of a view. Keep secondary and less consequential actions visually quieter. Labels should name the action or outcome; use an icon alongside text only when it helps identify the action.
 
 # Elevation and depth
 
