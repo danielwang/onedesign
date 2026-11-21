@@ -1,6 +1,6 @@
 ---
-version: "1.1.1"
-last date: Nov 19 2026
+version: "1.2.0"
+last date: Nov 22 2026
 name: "ONEdesign"
 description: "AI design system for nebulaONE."
 colors:
@@ -413,4 +413,5 @@ No marketing-adjective copy.
 No placeholder-as-label, and no vague errors.
 One primary button per view, with outcome-named labels.
 No default palette or typeface, and one accent color with one purpose.
-
+Reuse existing components wherever possible. Do not create new components unless no existing component can meet the need.
+Place secondary explanations, complementary details, definitions, and contextual guidance behind an information (ⓘ) icon or another appropriate disclosure control.
