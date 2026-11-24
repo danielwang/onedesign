@@ -1,5 +1,5 @@
 ---
-version: "1.2.0"
+version: "1.3.0"
 last date: Nov 22 2026
 name: "ONEdesign"
 description: "AI design system for nebulaONE."
@@ -369,8 +369,11 @@ Respect reduced-motion preferences by removing non-essential movement, parallax,
 ## Components
 
 - Do use `{components.card}` defaults as a starting point and adapt only with a documented reason.
-- Do provide clear hover, pressed, selected, disabled, and focus states.
+- Do reuse shared components and documented variants across the app so equivalent controls look and behave the same.
+- Do provide clear hover, pressed, selected, disabled, and focus states, with consistent keyboard, pointer, and touch behaviour.
+- Do make shared component changes at their source rather than adding page-specific copies or overrides.
 - Don’t introduce one-off radii, shadows, or spacing values without a system-level need.
+- Don’t create a new component when an existing component or variant can meet the need.
 
 ## Accessibility
 
