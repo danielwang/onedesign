@@ -4,6 +4,8 @@ import ClaudeCodeIcon from '@site/static/img/ai-icons/claude-code-dashboard.svg'
 import CursorIcon from '@site/static/img/ai-icons/cursor-dashboard.svg';
 import CodexIcon from '@site/static/img/ai-icons/codex-dashboard.svg';
 import GeminiIcon from '@site/static/img/ai-icons/gemini-dashboard.svg';
+import FigmaIcon from '@site/static/img/ai-icons/figma.svg';
+import CopilotIcon from '@site/static/img/ai-icons/github-copilot.svg';
 
 # AI designing
 
@@ -23,8 +25,10 @@ import GeminiIcon from '@site/static/img/ai-icons/gemini-dashboard.svg';
       <span className="ai-design-intro__tool"><span className="ai-design-intro__logo"><CursorIcon aria-hidden="true" /></span>Cursor</span>
       <span className="ai-design-intro__tool"><span className="ai-design-intro__logo"><CodexIcon aria-hidden="true" /></span>Codex</span>
       <span className="ai-design-intro__tool"><span className="ai-design-intro__logo"><GeminiIcon aria-hidden="true" /></span>Gemini</span>
+      <span className="ai-design-intro__tool"><span className="ai-design-intro__logo"><FigmaIcon aria-hidden="true" /></span>Figma Make</span>
+      <span className="ai-design-intro__tool"><span className="ai-design-intro__logo"><CopilotIcon aria-hidden="true" /></span>GitHub Copilot</span>
     </div>
-    <p className="ai-design-intro__more">And other AI coding assistants</p>
+    <p className="ai-design-intro__more">And other AI tools</p>
   </div>
 </section>
 

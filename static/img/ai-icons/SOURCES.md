@@ -8,5 +8,7 @@ These brand marks are displayed in the AI designing introduction. They were down
 | `cursor-dashboard.svg` | [Cursor](https://dashboardicons.com/icons/external/cursor) | LobeHub (MIT) |
 | `codex-dashboard.svg` | [Codex](https://dashboardicons.com/icons/external/lobehub/codex) | LobeHub (MIT) |
 | `gemini-dashboard.svg` | [Google Gemini](https://dashboardicons.com/icons/google-gemini) | Dashboard Icons (Apache 2.0) |
+| `figma.svg` | [Figma](https://icon-sets.iconify.design/logos/figma/) | SVG Logos (CC0 1.0) |
+| `github-copilot.svg` | [GitHub Copilot](https://icon-sets.iconify.design/logos/github-copilot/) | SVG Logos (CC0 1.0) |
 
-See the [Dashboard Icons license page](https://dashboardicons.com/license) for collection and brand-mark terms.
+See each linked icon page for collection and brand-mark terms.

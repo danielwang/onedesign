@@ -662,7 +662,7 @@ table {
 
 .ai-design-intro__grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 0.75rem;
 }
 
@@ -703,6 +703,10 @@ table {
   margin: 1rem 0 0;
   color: var(--n1-text-muted);
   font-size: 0.875rem;
+}
+
+@media (max-width: 1199px) {
+  .ai-design-intro__grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
 
 @media (max-width: 767px) {
