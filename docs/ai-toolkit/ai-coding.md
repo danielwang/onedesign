@@ -29,18 +29,17 @@ ONEdesign offers two versions of DESIGN.md for different development environment
 | Component specifications | References existing library | Included |
 | Anti-slop rules | Included | Included |
 
-Choose the version based on whether your AI agent has access to the existing component library and application theme.
+Choose the version based on whether your AI agent has access to the nebulaONE product component library and app theme.
 
 ## Repository-aware DESIGN.md
 
-Use this version when developing or modifying UI within an existing application.
+Use this version when developing or modifying UI within nebulaONE product repo.
 
 It guides AI on **which components and patterns to use, rather than how components are built**.
 
 <MarkdownReader content={repositoryDesign} filename="DESIGN.repository.md" title="Repository-aware DESIGN.md" />
 
 ### Installation
-
 
 1. Download `DESIGN.repository.md`.
 2. Place it in the repository root.
@@ -60,7 +59,7 @@ It guides AI on **which components and patterns to use, rather than how componen
 
 ## Standalone DESIGN.md
 
-Use this version when generating UI without access to the existing application codebase or component library.
+Use this version when generating UI **without** access to the nebulaONE product codebase or component library.
 
 It provides a self-contained design reference, including colours, typography, spacing, layout, component styling and interaction patterns.
 
@@ -70,9 +69,9 @@ It provides a self-contained design reference, including colours, typography, sp
 
 Use any of the following methods:
 
-- Download and attach `DESIGN.standalone.md` to your AI prompt.
-- Rename it to `DESIGN.standalone.md` and place it in a new project's root.
-- Include it as reference material in an AI skill.
+- A. Download and attach `DESIGN.standalone.md` to your AI prompt.
+- B. Rename it to `DESIGN.standalone.md` and place it in a new project's root.
+- C. Include it as reference material in an AI skill.
 
 ### Agent instructions
 
