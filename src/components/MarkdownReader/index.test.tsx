@@ -12,18 +12,32 @@ beforeEach(() => {
 afterEach(() => cleanup());
 
 describe('MarkdownReader', () => {
-  it('switches between preview and the exact AI view', () => {
+  it('opens the exact AI view first and switches to preview', () => {
     render(<MarkdownReader content={content} />);
-    expect(screen.getByRole('heading', {name: 'Hello'})).toBeInTheDocument();
-    fireEvent.click(screen.getByRole('button', {name: 'AI View'}));
+    expect(screen.getByRole('button', {name: 'AI View'})).toHaveAttribute('aria-pressed', 'true');
     expect(screen.getByText((_, element) => element?.tagName === 'CODE' && element.textContent === content)).toBeInTheDocument();
+    expect(screen.getByRole('region', {name: 'document.md AI View'}).querySelector('.token')).toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', {name: 'Preview'}));
+    expect(screen.getByRole('heading', {name: 'Hello'})).toBeInTheDocument();
+    expect(screen.getByRole('region', {name: 'document.md preview'}).querySelector('.token')).toBeInTheDocument();
+  });
+
+  it('hides front matter in preview while preserving it in AI View', () => {
+    const document = '---\nname: ONEdesign\n---\n\n# Hello';
+    render(<MarkdownReader content={document} />);
+    fireEvent.click(screen.getByRole('button', {name: 'Preview'}));
+    expect(screen.getByRole('heading', {name: 'Hello'})).toBeInTheDocument();
+    expect(screen.queryByText(/name: ONEdesign/)).not.toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', {name: 'AI View'}));
+    expect(screen.getByText((_, element) => element?.tagName === 'CODE' && element.textContent === document)).toBeInTheDocument();
   });
 
   it('copies the complete Markdown and reports success', async () => {
     render(<MarkdownReader content={content} />);
     fireEvent.click(screen.getByRole('button', {name: 'Copy Markdown'}));
     await waitFor(() => expect(navigator.clipboard.writeText).toHaveBeenCalledWith(content));
-    expect(screen.getByRole('button', {name: 'Copied'})).toHaveTextContent('Copied');
+    expect(screen.getByRole('button', {name: 'Copied'})).toBeInTheDocument();
+    expect(screen.getByRole('status')).toHaveTextContent('Markdown copied');
   });
 
   it('downloads the supplied filename', () => {

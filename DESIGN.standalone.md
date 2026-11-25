@@ -983,6 +983,24 @@ Keep the main task prominent. Group related content and actions. Use progressive
 - Do honor reduced-motion preferences.
 - Don’t use looping, flashing, parallax, or delayed transitions that interfere with usability.
 
+# Anti-slop rules
+
+AI-generated interfaces must avoid unnecessary decoration and generic AI design patterns.
+
+| Avoid | Prefer |
+| --- | --- |
+| Gradients | Existing solid theme colours |
+| Glassmorphism and glow | Clear surfaces and boundaries |
+| Decorative shadows | Elevation for meaningful floating layers |
+| Cards inside cards | Spacing and content hierarchy |
+| Decorative icons | Meaningful functional icons |
+| Emoji as UI icons | Approved icon library |
+| Centred-everything layouts | Consistent alignment and reading flow |
+| Unnecessary badges | Clear headings and meaningful labels |
+| Decorative animations | Purposeful interaction feedback |
+| Multiple competing primary actions | Clear action hierarchy |
+| Marketing-heavy copy | Direct, task-oriented language |
+
 ## Hard UI rules
 
 Avoid unnecessary secondary labels and descriptions. Let the layout do the explaining.

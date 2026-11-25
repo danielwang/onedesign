@@ -605,6 +605,9 @@ table {
     background: var(--n1-sidebar-background);
     z-index: 2;
   }
+  .theme-doc-sidebar-container + main {
+    padding-left: var(--ds-space-md);
+  }
 }
 
 /* The landing page provides its own compact header at narrow widths. */

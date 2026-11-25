@@ -3,7 +3,7 @@ name: ONEdesign
 version: "2.0.0 beta"
 mode: repository-aware
 last-updated: "2026-11-24"
-description: The repository version teaches AI how to design with the existing system.
+description: The repository version teaches AI how to design UI with the existing nebulaONE system.
 ---
 
 # Overview
@@ -82,6 +82,25 @@ Choose components by user intent, not appearance. Prefer the existing component 
 | Tooltip or disclosure | Optional explanation; keep essential instructions visible. |
 
 Keep the main task prominent. Group related content and actions. Use progressive disclosure for secondary information. Preserve user input and context during recovery. Consider empty, loading, error, success and permission states where relevant. For destructive or consequential actions, provide appropriate confirmation or recovery. Use familiar patterns before introducing novel interactions.
+
+# Anti-slop rules
+
+AI-generated interfaces must avoid unnecessary decoration and generic AI design patterns.
+
+| Avoid | Prefer |
+| --- | --- |
+| Gradients | Existing solid theme colours |
+| Glassmorphism and glow | Clear surfaces and boundaries |
+| Decorative shadows | Elevation for meaningful floating layers |
+| Cards inside cards | Spacing and content hierarchy |
+| Decorative icons | Meaningful functional icons |
+| Emoji as UI icons | Approved icon library |
+| Centred-everything layouts | Consistent alignment and reading flow |
+| Unnecessary badges | Clear headings and meaningful labels |
+| Decorative animations | Purposeful interaction feedback |
+| Multiple competing primary actions | Clear action hierarchy |
+| Marketing-heavy copy | Direct, task-oriented language |
+
 
 # Hard UI rules
 
